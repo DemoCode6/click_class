@@ -1,0 +1,28 @@
+<scroll-view class="shaixuan" scroll-y>
+	<view class="pinzhi">品质</view>
+	<view class="pinzhi_mian">
+		<view wx:for="{{pinzhi}}" wx:key="item" class="{{item.is ? 'active' : ''}}" bindtap="headelsclick" data-index="{{index}}">五星餐厅</view>
+	</view>
+
+
+	<view class="pinzhi">优惠</view>
+	<view class="yiuhui_mian">
+		<view wx:for="{{youhui}}" wx:key="item" class="yiuhui_mian_item {{item.is ? 'active' : ''}}" bindtap="youhuiClick" data-index="{{index}}">
+      <view>{{item.value}}</view>
+      <view>{{item.smallVal}}</view>
+    </view>
+	</view>
+
+	<view class="pinzhi">用餐时段</view>
+	<view class="pinzhi_mian">
+		<view wx:for="{{yongcanshijian}}" wx:key="item" class="{{item.is ? 'active' : ''}}" bindtap="yongcanshijianClick" data-index="{{index}}">
+			{{item.value}}
+		</view>
+	</view>
+
+<view class="submit_but">
+  <view bindtap="reset">重置</view>
+  <view>确定</view>
+</view>
+
+</scroll-view>
